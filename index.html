@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset="UTF-8">
+<link rel="favicon" href="images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="myWebJS/myWeb.js" defer></script>
+<script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"></script>
+<title>Soccer PLUS</title>
+</head>
+<body>
+    <!-- 헤더 / tab -->
+    <header>
+        <div class="logo">
+            <img src="images/icon.png" alt="logo" id="logoIcon">
+        </div>
+        <nav class="tab">
+            <a href="index.html" class="tablinks" onclick="setActiveTab(event, 'index')" id="defaultOpen">HOME</a>
+            <a href="league.html" class="tablinks" onclick="setActiveTab(event, 'league')">LEAGUE</a>
+            <a href="team.html" class="tablinks" onclick="setActiveTab(event, 'team')">TEAM</a>
+            <a href="player.html" class="tablinks" onclick="setActiveTab(event, 'player')">PLAYER</a>
+        </nav>
+        <div class="loginButton" id="loginButtonContainer">
+            <button class="login" id="loginButton" onclick="openModal()">LOGIN</button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT-->
+    <section id="index" class="tabcontent">
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <img src="https://assets.goal.com/images/v3/blt92c67b8218da9b49/22c72ad6ec6f911a81e51045de741b1710eb0625.jpg?auto=webp&format=pjpg&width=1080&quality=60" alt="banner">
+            </div>
+            <div class="mySlides">
+                <img src="images/banner2.jpg" alt="banner">
+            </div>
+            <div class="mySlides">
+                <img src="images/banner1.jpg" alt="banner">
+            </div>
+
+            <!-- 앞 뒤 화살표 -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- 슬라이드 dots -->
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- 경기 위젯 -->
+    <!-- 무료 api request 한도 초과. 확인할 때만 주석 풀고 잘 설정되어 있다면 주석 설정 해놓기 -->
+    <h2>경기 일정</h2>
+
+    <!-- <div id="wg-api-football-games"
+    data-host="v3.football.api-sports.io"
+    data-key="4f6051447c0d8a884a12017c079224c3"
+    data-date=""
+    data-league=""
+    data-season=""
+    data-theme=""
+    data-refresh="15"
+    data-show-toolbar="true"
+    data-show-errors="false"
+    data-show-logos="false"
+    data-modal-game="true"
+    data-modal-standings="true"
+    data-modal-show-logos="true">
+    </div> -->
+
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>LOGIN</h2>
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="EMAIL" required><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+                <div style="font-size: x-small; color: red;">* 영문 + 숫자 형태로 8자리 이상 입력하세요.</div>
+                <br><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <!-- 푸터 A -->
+            <div class="footA">
+                <h2>FootBall</h2>
+            </div>
+            <!-- 푸터 B -->
+            <nav class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">설립</a></li>
+                        <li><a href="#">주소</a></li>
+                        <li><a href="#">지도</a></li>
+                        <li><a href="#">스태프</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">다운로드</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">비즈니스</a></li>
+                        <li><a href="#">프로필</a></li>
+                        <li><a href="#">개발자</a></li>
+                        <li><a href="#">블로그</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- 푸터C : 저작권-->
+        <div class="footC">
+            © SIHOO corp. All rights reserved.
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="images/football_favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="myWebJS/team.js"></script>
+    <title>Soccer PLUS</title>
+</head>
+<body>
+    <!-- 팀 페이지 -->
+    <header>
+        <div class="logo">
+            <img src="images/icon.png" alt="logo" id="logoIcon">
+        </div>
+
+        <div class="tab">
+            <a href="index.html" class="tablinks" onclick="setActiveTab(event, 'index')">HOME</a>
+            <a href="league.html" class="tablinks" onclick="setActiveTab(event, 'league')">LEAGUE</a>
+            <a href="team.html" class="tablinks" onclick="setActiveTab(event, 'team')">TEAM</a>
+            <a href="player.html" class="tablinks" onclick="setActiveTab(event, 'player')">PLAYER</a>
+        </div>
+    </header>
+
+    <!-- 팀별 card -->
+    <div class="team-container">
+        <div class="team-table" id="team-card"></div>
+
+        
+        <div id="loading" class="loading hidden">
+            <img src="images/soccer-ball.png" alt="Loading..." id="loadingBall">
+        </div>
+    </div>
+
+    <!-- 팀 정보 검색 결과 모달 -->
+    <div id="team-modal" class="search-modal">
+        <div id="search-modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="team-modal-details"></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <!-- 푸터 A -->
+            <div class="footA">
+                <h2>FootBall</h2>
+            </div>
+            <!-- 푸터 B -->
+            <nav class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="#">설립</a></li>
+                        <li><a href="#">주소</a></li>
+                        <li><a href="#">지도</a></li>
+                        <li><a href="#">스태프</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="#">다운로드</a></li>
+                        <li><a href="#">매뉴얼</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">비즈니스</a></li>
+                        <li><a href="#">프로필</a></li>
+                        <li><a href="#">개발자</a></li>
+                        <li><a href="#">블로그</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- 푸터C : 저작권-->
+        <div class="footC">
+            © SIHOO corp. All rights reserved.
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>
